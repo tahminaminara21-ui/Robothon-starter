@@ -5,21 +5,18 @@
     {
       "task": {
         "id": "T01",
-        "name": "Grasp + hold: nominal",
+        "name": "Grasp+hold nominal",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 0
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -27,21 +24,18 @@
     {
       "task": {
         "id": "T02",
-        "name": "Grasp + hold: rand mass",
+        "name": "Grasp+hold rand mass",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 1
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 28.31,
-        "cube_lift_mm": 4.22,
+        "wrist_rotation_deg": 28.41,
+        "cube_rotation_deg": 3.68,
+        "cube_lift_mm": 8.19,
         "n_contacts_at_grasp": 16,
-        "slip_events": 0,
-        "peak_contact_force_N": 29190.277,
-        "force_budget_N": null,
-        "force_compliant": true,
+        "slip_events": 919,
         "steps": 1482
       },
       "passed": true
@@ -49,21 +43,18 @@
     {
       "task": {
         "id": "T03",
-        "name": "Grasp + hold: rand friction",
+        "name": "Grasp+hold rand friction",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 2
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.57,
-        "cube_lift_mm": 2.03,
+        "wrist_rotation_deg": 27.71,
+        "cube_rotation_deg": 4.61,
+        "cube_lift_mm": 6.2,
         "n_contacts_at_grasp": 11,
         "slip_events": 0,
-        "peak_contact_force_N": 30036.813,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -71,21 +62,18 @@
     {
       "task": {
         "id": "T04",
-        "name": "Grasp + hold: rand pos + mass",
+        "name": "Grasp+hold rand pos+mass",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 3
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.9,
-        "cube_lift_mm": 3.11,
+        "wrist_rotation_deg": 28.03,
+        "cube_rotation_deg": 5.53,
+        "cube_lift_mm": 6.64,
         "n_contacts_at_grasp": 11,
-        "slip_events": 0,
-        "peak_contact_force_N": 30038.01,
-        "force_budget_N": null,
-        "force_compliant": true,
+        "slip_events": 830,
         "steps": 1482
       },
       "passed": true
@@ -93,21 +81,18 @@
     {
       "task": {
         "id": "T05",
-        "name": "Reorient wrist +28deg seed 0",
+        "name": "Dual-axis reorient seed 0",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 0
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -115,21 +100,18 @@
     {
       "task": {
         "id": "T06",
-        "name": "Reorient wrist +28deg seed 1",
+        "name": "Dual-axis reorient seed 1",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 1
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -137,21 +119,18 @@
     {
       "task": {
         "id": "T07",
-        "name": "Reorient wrist +28deg rand mass",
+        "name": "Dual-axis reorient rand mass",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 4
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 18.79,
-        "cube_lift_mm": -1.56,
+        "wrist_rotation_deg": 18.9,
+        "cube_rotation_deg": 11.77,
+        "cube_lift_mm": 1.03,
         "n_contacts_at_grasp": 9,
         "slip_events": 0,
-        "peak_contact_force_N": 15381.962,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -159,21 +138,18 @@
     {
       "task": {
         "id": "T08",
-        "name": "Reorient wrist +28deg rand friction",
+        "name": "Dual-axis reorient rand fric",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 5
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.97,
-        "cube_lift_mm": 2.92,
+        "wrist_rotation_deg": 28.02,
+        "cube_rotation_deg": 3.17,
+        "cube_lift_mm": 5.71,
         "n_contacts_at_grasp": 12,
         "slip_events": 0,
-        "peak_contact_force_N": 29174.014,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -181,21 +157,18 @@
     {
       "task": {
         "id": "T09",
-        "name": "Reorient wrist +28deg all rand",
+        "name": "Dual-axis reorient all rand",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 6
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 28.2,
-        "cube_lift_mm": 4.11,
+        "wrist_rotation_deg": 28.26,
+        "cube_rotation_deg": 4.87,
+        "cube_lift_mm": 6.34,
         "n_contacts_at_grasp": 12,
         "slip_events": 0,
-        "peak_contact_force_N": 29174.972,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -203,21 +176,18 @@
     {
       "task": {
         "id": "T10",
-        "name": "Hold stable 200 steps (seed 0)",
+        "name": "Hold stable 200 steps seed 0",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 0
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -225,21 +195,18 @@
     {
       "task": {
         "id": "T11",
-        "name": "Hold stable 200 steps (seed 1)",
+        "name": "Hold stable 200 steps seed 1",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 1
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -247,21 +214,18 @@
     {
       "task": {
         "id": "T12",
-        "name": "Hold stable 200 steps (rand mass)",
+        "name": "Hold stable rand mass",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 7
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.84,
-        "cube_lift_mm": 3.24,
+        "wrist_rotation_deg": 27.95,
+        "cube_rotation_deg": 4.31,
+        "cube_lift_mm": 6.77,
         "n_contacts_at_grasp": 15,
         "slip_events": 0,
-        "peak_contact_force_N": 29175.905,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -269,21 +233,18 @@
     {
       "task": {
         "id": "T13",
-        "name": "Hold stable 200 steps (rand fric)",
+        "name": "Hold stable rand fric",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 8
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 28.19,
-        "cube_lift_mm": 3.98,
+        "wrist_rotation_deg": 28.24,
+        "cube_rotation_deg": 3.46,
+        "cube_lift_mm": 5.99,
         "n_contacts_at_grasp": 13,
-        "slip_events": 0,
-        "peak_contact_force_N": 29231.799,
-        "force_budget_N": null,
-        "force_compliant": true,
+        "slip_events": 949,
         "steps": 1482
       },
       "passed": true
@@ -291,21 +252,18 @@
     {
       "task": {
         "id": "T14",
-        "name": "Hold stable 200 steps (all rand)",
+        "name": "Hold stable all rand",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 9
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.54,
-        "cube_lift_mm": 28.83,
+        "wrist_rotation_deg": 27.58,
+        "cube_rotation_deg": 19.42,
+        "cube_lift_mm": 12.95,
         "n_contacts_at_grasp": 8,
-        "slip_events": 0,
-        "peak_contact_force_N": 17316.342,
-        "force_budget_N": null,
-        "force_compliant": true,
+        "slip_events": 1061,
         "steps": 1482
       },
       "passed": true
@@ -313,21 +271,18 @@
     {
       "task": {
         "id": "T15",
-        "name": "Full mission: grasp+reorient+place (seed 0)",
+        "name": "Full mission seed 0",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 0
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -335,21 +290,18 @@
     {
       "task": {
         "id": "T16",
-        "name": "Full mission: grasp+reorient+place (seed 1)",
+        "name": "Full mission seed 1",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 1
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -357,21 +309,18 @@
     {
       "task": {
         "id": "T17",
-        "name": "Full mission: grasp+reorient+place (seed 2)",
+        "name": "Full mission seed 2",
         "domain_rand": false,
-        "force_budget": null,
         "seed": 2
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.46,
-        "cube_lift_mm": 1.55,
+        "wrist_rotation_deg": 27.59,
+        "cube_rotation_deg": 7.3,
+        "cube_lift_mm": 6.22,
         "n_contacts_at_grasp": 10,
         "slip_events": 0,
-        "peak_contact_force_N": 30043.635,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -379,21 +328,18 @@
     {
       "task": {
         "id": "T18",
-        "name": "Full mission: domain rand seed 3",
+        "name": "Full mission rand seed 3",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 3
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.9,
-        "cube_lift_mm": 3.11,
+        "wrist_rotation_deg": 28.03,
+        "cube_rotation_deg": 5.53,
+        "cube_lift_mm": 6.64,
         "n_contacts_at_grasp": 11,
-        "slip_events": 0,
-        "peak_contact_force_N": 30038.01,
-        "force_budget_N": null,
-        "force_compliant": true,
+        "slip_events": 830,
         "steps": 1482
       },
       "passed": true
@@ -401,21 +347,18 @@
     {
       "task": {
         "id": "T19",
-        "name": "Full mission: domain rand seed 4",
+        "name": "Full mission rand seed 4",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 4
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 18.79,
-        "cube_lift_mm": -1.56,
+        "wrist_rotation_deg": 18.9,
+        "cube_rotation_deg": 11.77,
+        "cube_lift_mm": 1.03,
         "n_contacts_at_grasp": 9,
         "slip_events": 0,
-        "peak_contact_force_N": 15381.962,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
@@ -423,21 +366,18 @@
     {
       "task": {
         "id": "T20",
-        "name": "Full mission: domain rand seed 5",
+        "name": "Full mission rand seed 5",
         "domain_rand": true,
-        "force_budget": null,
         "seed": 5
       },
       "result": {
         "success": true,
         "final_state": "DONE",
-        "wrist_rotation_deg": 27.97,
-        "cube_lift_mm": 2.92,
+        "wrist_rotation_deg": 28.02,
+        "cube_rotation_deg": 3.17,
+        "cube_lift_mm": 5.71,
         "n_contacts_at_grasp": 12,
         "slip_events": 0,
-        "peak_contact_force_N": 29174.014,
-        "force_budget_N": null,
-        "force_compliant": true,
         "steps": 1482
       },
       "passed": true
