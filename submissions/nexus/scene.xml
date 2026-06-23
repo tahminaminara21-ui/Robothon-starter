@@ -1,0 +1,114 @@
+<mujoco model="shadowhand_dexterous">
+  <include file="shadow_hand/right_hand.xml"/>
+
+  <statistic extent="0.4" center="0.1 0 0.15"/>
+
+  <visual>
+    <rgba haze="0.1 0.15 0.2 1"/>
+    <quality shadowsize="4096"/>
+    <global azimuth="160" elevation="-22" offwidth="1280" offheight="720"/>
+    <headlight diffuse="0.7 0.7 0.7" ambient="0.4 0.4 0.4" specular="0.1 0.1 0.1"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.25 0.4 0.6" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge"
+      rgb1="0.2 0.2 0.25" rgb2="0.15 0.15 0.2" markrgb="0.7 0.7 0.7" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="4 4" reflectance="0.15"/>
+    <material name="stand_mat" rgba="0.3 0.3 0.35 1" reflectance="0.2"/>
+    <material name="cube_mat"  rgba="0.85 0.15 0.1 1" reflectance="0.4"/>
+    <material name="goal_mat"  rgba="0.1 0.9 0.1 0.3"/>
+    <material name="tray_mat"  rgba="0.4 0.5 0.6 1" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <light name="top"  pos="0 0 1.5" dir="0 0 -1" directional="true" diffuse="0.6 0.6 0.6" castshadow="true"/>
+    <light name="side" pos="0.5 -0.5 1.0" dir="-0.3 0.3 -0.8" diffuse="0.35 0.35 0.45"/>
+    <geom name="floor" pos="0 0 -0.01" size="0 0 0.05" type="plane" material="groundplane"/>
+
+    <!-- Stand: holds the Shadow Hand fixed with palm up -->
+    <body name="stand" pos="0 0 0">
+      <geom type="box"      size="0.08 0.08 0.01"  pos="0 0 0.01"  material="stand_mat"/>
+      <geom type="cylinder" size="0.025 0.1"        pos="0 0 0.11"  material="stand_mat"/>
+      <body name="forearm_mount" pos="0 0 0.22" euler="0 -1.5708 0">
+        <geom type="cylinder" size="0.018 0.04" rgba="0.4 0.4 0.45 1"/>
+        <site name="mount_site" pos="0 0 0.04"/>
+      </body>
+    </body>
+
+    <!-- Cube to grasp and reorient (freejoint) -->
+    <body name="cube" pos="0.37 0 0.01">
+      <freejoint name="cube_free"/>
+      <geom name="cube_geom" type="box" size="0.022 0.022 0.022"
+            material="cube_mat" mass="0.08" condim="6"
+            friction="1.0 0.005 0.0001" solimp="0.95 0.99 0.001" solref="0.004 1"/>
+      <site name="cube_top"    pos="0 0  0.022" size="0.003"/>
+      <site name="cube_center" pos="0 0  0"      size="0.003"/>
+    </body>
+
+    <!-- Goal zone (visual only, shows target orientation) -->
+    <body name="goal_zone" pos="0.37 0 0.035">
+      <geom type="box" size="0.023 0.023 0.023" material="goal_mat"
+            contype="0" conaffinity="0"/>
+      <site name="goal_site" pos="0 0 0" size="0.004"/>
+    </body>
+
+    <!-- Delivery tray -->
+    <body name="tray" pos="0.37 0.12 0.005">
+      <geom type="box" size="0.05 0.04 0.005" material="tray_mat"/>
+      <geom type="box" size="0.005 0.04 0.015" pos="-0.05 0 0.01" material="tray_mat"/>
+      <geom type="box" size="0.005 0.04 0.015" pos=" 0.05 0 0.01" material="tray_mat"/>
+      <geom type="box" size="0.05 0.005 0.015" pos="0 -0.04 0.01" material="tray_mat"/>
+      <geom type="box" size="0.05 0.005 0.015" pos="0  0.04 0.01" material="tray_mat"/>
+      <site name="tray_center" pos="0 0 0.012" size="0.005"/>
+    </body>
+  </worldbody>
+
+  <!-- Weld forearm to stand -->
+  <equality>
+    <weld name="hand_weld" body1="rh_forearm" body2="forearm_mount" relpose="0 0 0 1 0 0 0"/>
+  </equality>
+
+  <sensor>
+    <!-- Cube state -->
+    <framepos     name="cube_pos"   objtype="body" objname="cube"/>
+    <framequat    name="cube_quat"  objtype="body" objname="cube"/>
+    <framelinvel  name="cube_vel"   objtype="body" objname="cube"/>
+    <frameangvel  name="cube_avel"  objtype="body" objname="cube"/>
+    <!-- Tray and goal -->
+    <framepos     name="tray_pos"   objtype="site" objname="tray_center"/>
+    <framepos     name="goal_pos"   objtype="site" objname="goal_site"/>
+    <!-- Grasp site -->
+    <framelinvel  name="grasp_vel"  objtype="site" objname="grasp_site"/>
+    <framepos     name="grasp_pos"  objtype="site" objname="grasp_site"/>
+    <!-- Hand joint positions (24 joints: 2 wrist + 22 finger) -->
+    <jointpos name="s_WRJ2" joint="rh_WRJ2"/>
+    <jointpos name="s_WRJ1" joint="rh_WRJ1"/>
+    <jointpos name="s_FFJ4" joint="rh_FFJ4"/>
+    <jointpos name="s_FFJ3" joint="rh_FFJ3"/>
+    <jointpos name="s_FFJ2" joint="rh_FFJ2"/>
+    <jointpos name="s_FFJ1" joint="rh_FFJ1"/>
+    <jointpos name="s_MFJ4" joint="rh_MFJ4"/>
+    <jointpos name="s_MFJ3" joint="rh_MFJ3"/>
+    <jointpos name="s_MFJ2" joint="rh_MFJ2"/>
+    <jointpos name="s_MFJ1" joint="rh_MFJ1"/>
+    <jointpos name="s_RFJ4" joint="rh_RFJ4"/>
+    <jointpos name="s_RFJ3" joint="rh_RFJ3"/>
+    <jointpos name="s_RFJ2" joint="rh_RFJ2"/>
+    <jointpos name="s_RFJ1" joint="rh_RFJ1"/>
+    <jointpos name="s_LFJ5" joint="rh_LFJ5"/>
+    <jointpos name="s_LFJ4" joint="rh_LFJ4"/>
+    <jointpos name="s_LFJ3" joint="rh_LFJ3"/>
+    <jointpos name="s_LFJ2" joint="rh_LFJ2"/>
+    <jointpos name="s_LFJ1" joint="rh_LFJ1"/>
+    <jointpos name="s_THJ5" joint="rh_THJ5"/>
+    <jointpos name="s_THJ4" joint="rh_THJ4"/>
+    <jointpos name="s_THJ3" joint="rh_THJ3"/>
+    <jointpos name="s_THJ2" joint="rh_THJ2"/>
+    <jointpos name="s_THJ1" joint="rh_THJ1"/>
+    <!-- System dynamics -->
+    <subtreeangmom name="hand_angmom" body="rh_forearm"/>
+    <subtreecom    name="hand_com"    body="rh_forearm"/>
+  </sensor>
+
+</mujoco>

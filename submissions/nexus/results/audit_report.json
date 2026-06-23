@@ -1,0 +1,321 @@
+{
+  "n_pass": 63,
+  "n_fail": 0,
+  "checks": [
+    {
+      "name": "nq=31",
+      "status": "PASS",
+      "detail": "nq=31"
+    },
+    {
+      "name": "nv=30",
+      "status": "PASS",
+      "detail": "nv=30"
+    },
+    {
+      "name": "nu=20",
+      "status": "PASS",
+      "detail": "nu=20"
+    },
+    {
+      "name": "nsensor=34",
+      "status": "PASS",
+      "detail": "nsensor=34"
+    },
+    {
+      "name": "freejoint cube_free exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "cube body exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "hand_weld equality exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "hand_weld is active",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "rh_forearm body exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "rh_thdistal body exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "cube_pos sensor exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "cube_quat sensor exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "grasp_site sensor exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "timestep=0.002",
+      "status": "PASS",
+      "detail": "dt=0.002"
+    },
+    {
+      "name": "mesh assets loaded (ngeom>=50)",
+      "status": "PASS",
+      "detail": "ngeom=73"
+    },
+    {
+      "name": "WRJ1 actuator exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "THJ1 actuator exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "condim=6 on cube geom",
+      "status": "PASS",
+      "detail": "condim=6"
+    },
+    {
+      "name": "no time.time() in env.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM IDLE state defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM PRESHAPE state defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM GRASP state defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM REORIENT state defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM HOLD state defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM RELEASE state defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM DONE state defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_contactForce used in env.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "friction_cone_margin defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "slip_reflex defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "domain_rand defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_episode defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "export_dataset defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "FSM gates on step_count (physics steps)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "SCENE_PATH uses Path(__file__)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mjd_transitionFD called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_fullM called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_mulM called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_differentiatePos called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_jacBody called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_angmomMat called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_geomDistance called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "mj_contactForce called in evaluate.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "energy (mj_energyPos/mj_energyVel) called",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_benchmark defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_ablation defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_dynamics_analysis defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_episode returns dict",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_episode has success key",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_episode has wrist_rotation_deg",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_episode has n_contacts_at_grasp",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "run_episode has friction_cone_margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "benchmark 20/20 pass",
+      "status": "PASS",
+      "detail": "20/20"
+    },
+    {
+      "name": "closed-loop >= open-loop",
+      "status": "PASS",
+      "detail": "10 vs 10"
+    },
+    {
+      "name": "dynamics_report.json exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mjd_transitionFD",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mj_fullM",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mj_mulM",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mj_differentiatePos",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mj_jacBody",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mj_angmomMat",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mj_geomDistance",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has mj_contactForce",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dynamics_report has energy",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}
