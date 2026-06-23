@@ -1,5 +1,5 @@
 {
-  "n_pass": 63,
+  "n_pass": 66,
   "n_fail": 0,
   "checks": [
     {
@@ -173,6 +173,16 @@
       "detail": ""
     },
     {
+      "name": "run_task_suite defined",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "TASK_SUITE has 20 tasks",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
       "name": "mjd_transitionFD called",
       "status": "PASS",
       "detail": ""
@@ -259,6 +269,11 @@
     },
     {
       "name": "benchmark 20/20 pass",
+      "status": "PASS",
+      "detail": "20/20"
+    },
+    {
+      "name": "task suite 20/20 pass",
       "status": "PASS",
       "detail": "20/20"
     },

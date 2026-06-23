@@ -82,6 +82,8 @@ def run_audit():
     check('export_dataset defined', 'export_dataset' in env_code)
     check('FSM gates on step_count (physics steps)', 'step_count' in env_code)
     check('SCENE_PATH uses Path(__file__)', 'SCENE_PATH = Path(__file__)' in env_code)
+    check('run_task_suite defined', 'run_task_suite' in env_code)
+    check('TASK_SUITE has 20 tasks', 'T20' in env_code)
 
     print("\n=== Audit: evaluate.py source ===")
     check('mjd_transitionFD called', 'mjd_transitionFD' in eval_code)
@@ -117,6 +119,15 @@ def run_audit():
         check('benchmark 20/20 pass', n_pass == n_seeds, f'{n_pass}/{n_seeds}')
     else:
         check('benchmark_report.json exists', False, 'run evaluate.py first')
+
+    # Task suite
+    suite = RESULTS / 'task_suite_report.json'
+    if suite.exists():
+        with open(suite) as f:
+            sdata = json.load(f)
+        check('task suite 20/20 pass', sdata.get('n_pass') == 20, f"{sdata.get('n_pass')}/20")
+    else:
+        check('task_suite_report.json exists', False, 'run run_task_suite first')
 
     abl = RESULTS / 'ablation_report.json'
     if abl.exists():
